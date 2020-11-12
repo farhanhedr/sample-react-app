@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Deployed on AWS S3. Manual build</h1>
+        <h1>Deployed on AWS S3. Automated build</h1>
       </header>
     </div>
   );
