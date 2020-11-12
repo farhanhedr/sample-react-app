@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+  build:
+    commands:
+       - npm install && npm run build && ls -al
+  post_build:
+    commands:
+       - aws s3 rm $S3_BUCKET --recursive 
+       - aws s3 cp --acl public-read ./build/ $S3_BUCKET --recursive
